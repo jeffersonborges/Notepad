@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
-
+import android.view.MenuItem
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,5 +18,19 @@ class MainActivity : AppCompatActivity() {
         val inflater = menuInflater
         inflater.inflate(R.menu.menu_principal, menu)
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.getItemId()) {
+            R.id.mnsalvar -> {
+
+                return true
+            }
+            R.id.mnPesquisar -> {
+
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
     }
 }
